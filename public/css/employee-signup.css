@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #f7c6c7, #e2f0cb); /* Pastel gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: fadeIn 1s ease-in-out;
+    position: relative; /* For the welcome message */
+}
+
+.signup-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent background */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    animation: slideIn 0.5s ease-in-out;
+    z-index: 2; /* Ensure the form is above the background */
+}
+
+.welcome-message {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #5a5a5a;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0.7; /* Slightly transparent for subtlety */
+    z-index: 1; /* Behind the form */
+}
+
+.signup-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.signup-container input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s;
+}
+
+.signup-container input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.signup-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.signup-container button:hover {
+    background-color: #0056b3;
+}
+
+.error-message, .success-message {
+    display: none;
+    color: red;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.success-message {
+    color: green;
+}
+
+.login-link {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.login-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}

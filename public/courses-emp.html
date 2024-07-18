@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" href="css/courses-emp.css">
+   
+</head>
+<body>
+    <header>
+        <h1>Courses</h1>
+        <div class="search-category">
+            <div class="search-bar">
+                <input type="text" id="searchBar" placeholder="Search for a course..." oninput="filterCourses()">
+                <span class="icon">&#128269;</span>
+            </div>
+            <select id="categories" onchange="filterCourses()">
+                <option value="all">All Categories</option>
+                <option value="web-dev">Web Development</option>
+                <option value="java">Java</option>
+                <option value="c++">C++</option>
+                <option value="android">Android</option>
+                <option value="business">Business</option>
+                <option value="finance-accounting">Finance & Accounting</option>
+                <option value="operating-systems">Operating Systems and Servers</option>
+            </select>
+            <button onclick="confirmLogout()">Logout</button>
+        </div>
+    </header>
+    <main>
+        <div class="description" id="description">
+            <p><b><i>Welcome Employee!</i></b></p>
+            <p>Here you can learn anytime and anywhere.</p>
+            <p>Choose from the various categories for the course assigned to you by admin.</p>
+        </div>
+
+        <div class="course-container" id="courseContainer">
+            <a class="course-item" href="web-dev-101.html" data-category="web-dev">
+                <h3>Web Development </h3>
+                <p>Learn latest topics like serverless architecture, web security and much more!</p>
+            </a>
+            <a class="course-item" href="advanced-java.html" data-category="java">
+                <h3>Advanced Java</h3>
+                <p>Master Java programming with advanced techniques.</p>
+            </a>
+            <a class="course-item" href="cpp-beginners.html" data-category="c++">
+                <h3>C++</h3>
+                <p>Upskill your C++ programming skills.</p>
+            </a>
+            <!-- Add more courses as needed -->
+        </div>
+
+        <div class="motivation-section">
+            <h2>Unlock Your Potential</h2>
+            <p>Learning is a continuous journey. Embrace every opportunity to expand your skills!</p>
+            <p>Every course you complete brings you one step closer to your career aspirations.</p>
+            <p>Stay curious, stay motivated, and take charge of your professional growth!</p>
+        </div>
+        
+    </main>
+    <footer>
+        <a href="#">About Us</a>
+        <a href="#">Help and Support</a>
+        <a href="#">Investors</a>
+        <a href="#">Terms</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Cookie Settings</a>
+        <a href="#">Blog</a>
+        <a href="#">Careers</a>
+    </footer>
+    <script src ="js/courses-emp.js"></script>
+
+</body>
+</html>

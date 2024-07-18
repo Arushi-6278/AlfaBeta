@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Sign Up</title>
+    <link rel="stylesheet" href="css/employee-signup.css">
+</head>
+<body>
+    <div class="welcome-message">Welcome to Our Training Portal!</div>
+    <div class="signup-container">
+        <form id="employeeSignupForm">
+            <label for="employeeSignupName">Name:</label>
+            <input type="text" id="employeeSignupName" name="name" required>
+            <label for="employeeSignupUsername">Username:</label>
+            <input type="text" id="employeeSignupUsername" name="username" required>
+            <label for="employeeSignupPassword">Password:</label>
+            <input type="password" id="employeeSignupPassword" name="password" required>
+            <button type="submit">Sign Up</button>
+            <p class="error-message" id="error-message" style="display: none;">An employee account already exists. Please log in.</p>
+            <p class="success-message" id="success-message" style="display: none;">Sign up successful! Redirecting to login...</p>
+            <p class="login-link" id="login-link">Account already exists? <a href="employee-login.html">Login</a></p>
+        </form>
+    </div>
+    <script src="js/employee/signup.js"></script>
+</body>
+</html>

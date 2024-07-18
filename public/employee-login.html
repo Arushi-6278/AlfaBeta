@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Login</title>
+    <link rel="stylesheet" href="css/employee-login.css">
+</head>
+<body>
+    <h1>Employee Login</h1>
+    <form id="employeeLoginForm">
+        <label for="employeeLoginUsername">Username:</label>
+        <input type="text" id="employeeLoginUsername" name="username" required>
+        <br>
+        <label for="employeeLoginPassword">Password:</label>
+        <input type="password" id="employeeLoginPassword" name="password" required>
+        <br>
+        <button type="submit">Login</button>
+        <p class="error-message" id="error-message" style="display: none;">Invalid username or password.</p>
+        <a href="employee-signup.html" class="signup-link">Sign up here</a>
+    </form>
+    <script src="js/employee/login.js"></script>
+</body>
+</html>

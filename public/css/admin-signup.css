@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #f8bbd0, #b2ebf2); /* Pastel gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.signup-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 320px; /* Set a fixed width */
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.signup-container h1 {
+    margin-bottom: 20px;
+    text-align: center; /* Center the heading */
+    color: #5a5a5a;
+}
+
+.signup-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.signup-container input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px; /* Increased spacing between input fields */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s;
+}
+
+.signup-container input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.signup-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #87c6cd; /* Button color matching the pastel background */
+    color: #09445c; /* Darker text color for contrast */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.signup-container button:hover {
+    background-color: #a0d4db; /* Slightly darker shade on hover */
+}
+
+.error-message, .success-message {
+    display: none;
+    text-align: center; /* Center error/success messages */
+    margin: 10px 0;
+}
+
+.success-message {
+    color: green;
+}
+
+.login-link {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.login-link a {
+    color: #5e0c70;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}

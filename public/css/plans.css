@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    animation: fadeIn 1s ease-in;
+}
+.plans {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 30px;
+}
+.plan {
+    background: linear-gradient(135deg, #fff, #f9f9f9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideInUp 0.5s ease;
+}
+.plan:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.plan h3 {
+    color: #333;
+    margin-top: 0;
+}
+.plan p {
+    line-height: 1.6;
+    color: #666;
+}
+.plan ul {
+    list-style-type: none;
+    padding: 0;
+}
+.plan ul li {
+    margin: 10px 0;
+    color: #444;
+    position: relative;
+    padding-left: 20px;
+}
+.plan ul li::before {
+    content: '✔';
+    color: #2ecc71;
+    position: absolute;
+    left: 0;
+}
+.plan .price {
+    font-size: 24px;
+    margin: 20px 0;
+    color: #000;
+}
+.plan button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.plan button:hover {
+    background-color: #444;
+}
+.header {
+    text-align: center;
+    margin-top: 20px;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideInUp {
+    from { transform: translateY(20px); }
+    to { transform: translateY(0); }
+}

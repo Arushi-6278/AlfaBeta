@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #f8bbd0, #b2ebf2); /* Pastel gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 360px; /* Increased width for the form container */
+    position: relative; /* Position relative to place the back arrow */
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+    text-align: center; /* Center the heading */
+    color: #5a5a5a;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.login-container input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 30px; /* Increased spacing between input fields */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s;
+}
+
+.login-container input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #b2ebf2; /* Button color matching the pastel background */
+    color: #2a3232; /* Darker text color for contrast */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+    background-color: #a0d4db; /* Slightly darker shade on hover */
+}
+
+.error-message {
+    color: red;
+    display: none;
+    text-align: center; /* Center the error message */
+    margin: 10px 0;
+}
+
+.back-arrow {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    color: #691347;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.back-arrow:hover {
+    color: #8d09ab;
+}
+
+.spacing {
+    height: 20px; /* Add extra spacing */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}

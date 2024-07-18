@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Sign Up</title>
+    <link rel="stylesheet" href="css/admin-signup.css">
+</head>
+<body>
+    <div class="signup-container">
+        <form id="adminSignupForm">
+            <label for="adminSignupUsername">Username:</label>
+            <input type="text" id="adminSignupUsername" name="username" required placeholder="Enter username" autocomplete="off">
+            <label for="adminSignupPassword">Password:</label>
+            <input type="password" id="adminSignupPassword" name="password" required placeholder="Enter password" autocomplete="off">
+            <button type="submit">Sign Up</button>
+            <p class="error-message" id="error-message" style="display:none;">An admin account already exists. Please log in.</p>
+            <p class="success-message" id="success-message" style="display:none;">Sign up successful! Redirecting to login...</p>
+            <p class="login-link" id="login-link">Account already exists? <a href="admin-login.html">Login</a></p>
+        </form>
+    </div>
+    <script src="js/admin/signup.js"></script>
+</body>
+</html>

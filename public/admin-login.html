@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="css/admin-login.css">
+</head>
+<body>
+    <div class="login-container">
+        <a href="admin-signup.html" class="back-arrow">&#8592;</a> 
+        <div class="spacing"></div> 
+        <form id="adminLoginForm">
+            <label for="adminLoginUsername">Username:</label>
+            <input type="text" id="adminLoginUsername" name="username" required placeholder="Enter username" autocomplete="off">
+            <label for="adminLoginPassword">Password:</label>
+            <input type="password" id="adminLoginPassword" name="password" required placeholder="Enter password" autocomplete="off">
+            <button type="submit">Login</button>
+            <p class="error-message" id="error-message" style="display:none;">Invalid username or password.</p>
+        </form>
+    </div>
+    <script src="js/admin/login.js"></script>
+</body>
+</html>

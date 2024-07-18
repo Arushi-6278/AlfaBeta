@@ -1,0 +1,302 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:100px;
+    margin-bottom:20px;
+}
+header h1 {
+    margin: 7px;
+    
+}
+header .search-category {
+    display: flex;
+    align-items: center;
+}
+header .search-bar {
+    position: relative;
+    margin-right: 20px;
+    width: 400px;
+    
+    
+}
+header .search-bar input[type="text"] {
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    height: 30px;
+    width: calc(100% - 20px);
+    box-sizing: border-box;
+    padding-left: 40px;
+}
+header .search-bar .icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+header .tab {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+}
+header .tab:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+header select {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    height: 43px;
+    cursor:pointer;
+}
+main {
+    padding: 20px;
+    position: relative;
+}
+.description {
+    margin-bottom: 20px;
+}
+#courseList {
+    overflow: hidden;
+    white-space: nowrap;
+    padding-bottom: 20px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    
+}
+#courseList::-webkit-scrollbar {
+    display: none;
+}
+.course-container {
+    display: flex;
+    align-items: flex-start;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+    position: relative;
+    
+}
+.course-item {
+    border: 1px solid #ccc;
+    background-color: #333;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    height: 180px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color:grey;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top:30px;
+    vertical-align: top;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Added transition for background color */
+    position: relative;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+
+.course-item:hover {
+    transform: scale(1.05);
+    background-color: #7d888d;
+    color:#333 ;
+}
+
+.course-item h3 {
+    margin-top: 0;
+}
+.learning-goals ul {
+    
+    list-style-type: disc;
+    padding-left: 20px;
+    line-height: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.learning-goals ul li {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: dropIn 0.5s forwards;
+    animation-delay: var(--delay);
+    
+}
+
+.learning-goals ul li:nth-child(1) {
+    --delay: 0.5s;
+}
+
+.learning-goals ul li:nth-child(2) {
+    --delay: 1.5s;
+}
+
+.learning-goals ul li:nth-child(3) {
+    --delay: 2.0s;
+}
+
+.learning-goals ul li:nth-child(4) {
+    --delay: 2.5s;
+}
+
+.learning-goals ul li:nth-child(5) {
+    --delay: 3.0s;
+    margin-bottom:70px;
+}
+
+@keyframes dropIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.trending-now ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+
+.trending-now li {
+    margin: 10px;
+    padding: 10px 15px;
+    background-color: #352d2d;
+    color: aliceblue;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: dropIn 0.5s forwards;
+    animation-delay: var(--delay);
+}
+
+.trending-now li:hover {
+    background-color: #393434ac;
+}
+
+.trending-now a {
+    text-decoration: none;
+    color: #b4bcc5;
+}
+
+.trending-now a:hover {
+    background-blend-mode: color-burn;
+}
+
+.trending-now ul li:nth-child(1) {
+    --delay: 0.5s;
+}
+
+.trending-now ul li:nth-child(2) {
+    --delay: 1.0s;
+}
+
+.trending-now ul li:nth-child(3) {
+    --delay: 1.5s;
+}
+
+.trending-now ul li:nth-child(4) {
+    --delay: 2.0s;
+}
+
+.trending-now ul li:nth-child(5) {
+    --delay: 2.5s;
+}
+
+.trending-now ul li:nth-child(6) {
+    --delay: 3.0s;
+}
+
+.trending-now ul li:nth-child(7) {
+    --delay: 3.5s;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+.footer ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.footer li {
+    margin: 10px 15px;
+}
+.footer a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+.footer a:hover {
+    color: #ddd;
+}
+.footer .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Arrows for course scrolling */
+.scroll-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+.scroll-arrow.left {
+    left: 10px;
+    top:250px;
+}
+.scroll-arrow.right {
+    right: 10px;
+    top:250px;
+}
+.scroll-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.scroll-arrow svg {
+    width: 16px;
+    height: 20px;
+    fill: rgb(70, 63, 63);
+}

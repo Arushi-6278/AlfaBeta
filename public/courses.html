@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" href="css/courses.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Courses</h1>
+        <div class="search-category">
+            <div class="search-bar">
+                <input type="text" id="searchBar" placeholder="Search for a course...">
+                <span class="icon">&#128269;</span>
+            </div>
+
+            <div class="tab" onclick="redirectToPlansPage()">
+                Plans and Pricing
+            </div>
+
+            <select id="categories" onchange="filterCourses()">
+                <option value="all">All Categories</option>
+                <option value="web-dev">Web Development</option>
+                <option value="java">Java</option>
+                <option value="c++">C++</option>
+                <option value="android">Android</option>
+                <option value="business">Business</option>
+                <option value="finance-accounting">Finance & Accounting</option>
+                <option value="operating-systems">Operating Systems and Servers</option>
+            </select>
+
+            <button onclick="confirmLogout()" style="margin-left: 20px; padding: 13px; border-radius: 4px; border: none; background-color: #697878; color: white; cursor: pointer;">
+                Logout
+            </button>
+        </div>
+    </header>
+    <main>
+        <div class="description">
+            <p><b><i>Welcome Admin!</i></b></p>
+            <p>Here you can train your employees according to your suitable needs.</p>
+            <p>Choose from the various categories for the course that is best for upskilling your team.</p>
+        </div>
+        <div class="course-container" id="courseContainer">
+            <!-- Original Course Items -->
+            <a class="course-item" href="#">
+                <h3>Web Development 101</h3>
+                <p>Learn the basics of web development.</p>
+            </a>
+            <a class="course-item" href="#">
+                <h3>Advanced Java</h3>
+                <p>Master Java programming with advanced techniques.</p>
+            </a>
+            <a class="course-item" href="#">
+                <h3>C++ for Beginners</h3>
+                <p>Get started with C++ programming.</p>
+            </a>
+            <a class="course-item" href="#">
+                <h3>Android App Development</h3>
+                <p>Build your first Android app.</p>
+            </a>
+            <a class="course-item" href="#">
+                <h3>React.js Essentials</h3>
+                <p>Learn to build dynamic web applications with React.js.</p>
+            </a>
+            <a class="course-item" href="#">
+                <h3>Java Spring Boot</h3>
+                <p>Develop enterprise applications using Spring Boot.</p>
+            </a>
+            <!-- Duplicated Course Items for Infinite Scrolling -->
+            <a class="course-item" href="#">
+                <h3>Web Development 101</h3>
+                <p>Learn the basics of web development.</p>
+            </a>
+            <a class="course-item" href="#">
+                <h3>Advanced Java</h3>
+                <p>Master Java programming with advanced techniques.</p>
+            </a>
+            <a class="course-item" href="#">
+                <h3>C++ for Beginners</h3>
+                <p>Get started with C++ programming.</p>
+            </a>
+            <a class="course-item" href="#">
+                <h3>Android App Development</h3>
+                <p>Build your first Android app.</p>
+            </a>
+            <a class="course-item" href="#">
+                <h3>React.js Essentials</h3>
+                <p>Learn to build dynamic web applications with React.js.</p>
+            </a>
+            <a class="course-item" href="#">
+                <h3>Java Spring Boot</h3>
+                <p>Develop enterprise applications using Spring Boot.</p>
+            </a>
+        </div>
+        
+
+        
+
+        <section class="learning-goals">
+            <h2></h2> <!-- The heading will be populated by JavaScript -->
+            <ul>
+                <li>Enhance technical skills in various programming languages.</li>
+                <li>Gain practical knowledge applicable to real-world projects.</li>
+                <li>Improve problem-solving abilities in software development.</li>
+                <li>Master advanced concepts in web and mobile app development.</li>
+                <li>Stay updated with the latest trends and technologies in IT.</li>
+            </ul>
+        </section>
+        
+
+        <section class="trending-now">
+            <h2>Trending Now</h2>
+            <ul>
+                <li><a href="#">Machine Learning</a></li>
+                <li><a href="#">UI/UX Design</a></li>
+                <li><a href="#">Digital Marketing</a></li>
+                <li><a href="#">Cloud Computing</a></li>
+                <li><a href="#">Data Science</a></li>
+                <li><a href="#">Cybersecurity</a></li>
+                <li><a href="#">Project Management</a></li>
+            </ul>
+        </section>
+
+        <div class="scroll-arrow left" onclick="scrollCourses('left')">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </div>
+        <div class="scroll-arrow right" onclick="scrollCourses('right')">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        
+        <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Help and Support</a></li>
+            <li><a href="#">Investors</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Settings</a></li>
+            <li><a href="#">Sitemap</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </footer>
+
+    <script src ="js/courses.js"></script>
+
+</body>
+</html>
